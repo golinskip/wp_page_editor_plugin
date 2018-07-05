@@ -1,0 +1,1 @@
+<?php wp_enqueue_script('jquery-parallax', plugin_dir_url(__FILE__) . '../../js/parallax.min.js', array(), false, true); ?>

@@ -1,0 +1,18 @@
+{
+    "name": "current-article",
+    "title": "Current article",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "show_title": 0
+    }
+}

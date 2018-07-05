@@ -1,0 +1,35 @@
+{
+    "name": "swipe-card",
+    "title": "Swipe Card",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "side1": {
+            "title": "",
+            "description": "",
+            "link":"",
+            "color":"",
+            "imgType": "1",
+            "imgUrl": "http://via.placeholder.com/1280x300"
+        },
+        "side2": {
+            "title": "",
+            "description": "",
+            "link":"",
+            "color":"",
+            "imgType": "1",
+            "imgUrl": "http://via.placeholder.com/1280x300"
+        },
+        "width": "100%",
+        "height": "300px"
+    }
+}

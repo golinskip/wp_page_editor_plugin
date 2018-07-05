@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Whitesite Theme Toolkit\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-05 16:18+0000\n"
+"PO-Revision-Date: 2018-06-05 16:21+0000\n"
+"Last-Translator: pawel <pawel@pawelgolinski.pl>\n"
+"Language-Team: Polski\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10 >= 2 && n%10<=4 "
+"&&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Name of the plugin
+msgid "Whitesite Theme Toolkit"
+msgstr "Whitesite - narzędzie edytorskie"
+
+#. Description of the plugin
+msgid ""
+"Whitestite theme toolkit - activate this plugin if you are using Wtst theme"
+msgstr ""
+"Whitesite - narzędzie edytorskie - plugin niezbędny do zarządzania skórką "
+"firmy Whitesite"
+
+#. Author of the plugin
+msgid "Whitesite"
+msgstr "Whitesite"
+
+#. Author URI of the plugin
+msgid "http://whitesite.eu/"
+msgstr "http://whitesite.eu/"
+
+msgid "Layout settings"
+msgstr "Ustawienia szablonu"
+
+msgid "Frontpage settings"
+msgstr "Ustawienia strony głównej"
+
+msgid "Whitesite theme settings"
+msgstr "Ustawienia szablonu Whitesite"
+
+msgid "Whitesite theme"
+msgstr "Szablon Whitesite"
+
+msgid "Front page"
+msgstr "Strona główna"
+
+msgid "Edit Section"
+msgstr "Edycja sekcji"
+
+msgid "Edit Column"
+msgstr "Edycja kolumny"
+
+msgid "Edit Object"
+msgstr "Edycja obiektu"
+
+msgid "Template saved"
+msgstr "Szablon został zapisany"
+
+msgid "Save"
+msgstr "Zapisz"
+
+msgid "Disable"
+msgstr "Wyłącz"
+
+msgid "Enable"
+msgstr "Włącz"
+
+msgid "Add section"
+msgstr "Dodaj sekcję"
+
+msgid "Upload image"
+msgstr "Wyślij obraz"
+
+msgid "Reset"
+msgstr "Resetuj"
+
+msgid "Caption"
+msgstr "Podpis"
+
+msgid "Url"
+msgstr "Adres URL"
+
+msgid "Style"
+msgstr "Styl"
+
+msgid "Align"
+msgstr "Wyrównanie"
+
+msgid "Pages"
+msgstr "Strony"
+
+msgid "Edit"
+msgstr "Edytuj"
+
+msgid "Image Type"
+msgstr "Typ obrazka"
+
+msgid "Image Url"
+msgstr "Adres URL obrazka"

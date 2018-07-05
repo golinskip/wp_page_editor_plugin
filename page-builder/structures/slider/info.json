@@ -1,0 +1,50 @@
+{
+    "name": "slider",
+    "title": "Photo slider",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "duration": "1000",
+        "size": "full",
+        "layout": "simple",
+        "prop": "cut",
+        "num_of_slides": "1",
+        "height": "600px",
+        "slides": [
+            {
+                "media_type": 1,
+                "media_url": "http://via.placeholder.com/1280x300",
+                "title": "",
+                "description": "",
+                "url": "",
+                "text_position":"center"
+            }
+        ] 
+    },
+    "attr": {
+        "text_position": {
+            "left": "Left",
+            "center": "Center",
+            "right": "Right"
+        },
+        "layout": {
+            "simple": "Simple",
+            "parallax": "Parallax"
+        },
+        "sizes": [
+            "boxed", "full-width", "full-height", "full"
+        ],
+        "prop": [
+            "strech", "cut"
+        ]
+    }
+}

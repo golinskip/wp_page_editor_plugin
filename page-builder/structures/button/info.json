@@ -1,0 +1,61 @@
+{
+    "name": "button",
+    "title": "Button",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "caption": "",
+        "url": "",
+        "style": "",
+        "align": "left",
+        "width": "normal",
+        "size": "normal",
+        "margin_top": "0",
+        "margin_bottom": "0"
+    },
+    "attr": {
+        "style": {
+            "btn-primary" : "Primary",
+            "btn-secondary" : "Secondary",
+            "btn-success" : "Success",
+            "btn-danger" : "Danger",
+            "btn-warning" : "Warning",
+            "btn-info" : "Info",
+            "btn-light" : "Light",
+            "btn-dark" : "Dark",
+            "btn-outline-primary" : "Outline Primary",
+            "btn-outline-secondary" : "Outline Secondary",
+            "btn-outline-success" : "Outline Success",
+            "btn-outline-danger" : "Outline Danger",
+            "btn-outline-warning" : "Outline Warning",
+            "btn-outline-info" : "Outline Info",
+            "btn-outline-light" : "Outline Light",
+            "btn-outline-dark" : "Outline Dark"
+            
+        },
+        "width": {
+            "normal": "Normal",
+            "full": "Full width"
+        },
+        "align": {
+            "left" : "left",
+            "center" : "center",
+            "right" : "right"
+        },
+        "size": {
+            "normal": "Normal",
+            "btn-sm": "Small",
+            "btn-lg": "Large"
+            
+        }
+    }
+}
