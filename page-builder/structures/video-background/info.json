@@ -1,0 +1,27 @@
+{
+    "name": "video-background",
+    "title": "Video background",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "videoUrl": "",
+        "width": "100%",
+        "height": "100%",
+        "title": "",
+        "description": "",
+        "button1Title": "",
+        "button1Url": "",
+        "button2Title": "",
+        "button2Url": "",
+        "align": ""
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "name": "portfolio",
+    "title": "Portfolio",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "num_of_slides": "1",
+        "in_row": "3",
+        "on_click": "fullimage",
+        "default_link_caption": "Read more",
+        "read_more_after": 0,
+        "read_more_caption" : "Read more",
+        "button_style": "btn-primary",
+        "default_title": "Title",
+        "source": "local",
+        "height" : "400",
+        "padding" : "0",
+        "style": "sizeblur",
+        "slides": [
+            {
+                "media_type": 1,
+                "size" : 1,
+                "media_url": "http://via.placeholder.com/1280x300",
+                "title": "",
+                "link_caption": "",
+                "url": "#",
+                "custom_height" : "0"
+            }
+        ] 
+    },
+    "attr": {
+        "button_style": {
+            "btn-primary" : "Primary",
+            "btn-secondary" : "Secondary",
+            "btn-success" : "Success",
+            "btn-danger" : "Danger",
+            "btn-warning" : "Warning",
+            "btn-info" : "Info",
+            "btn-light" : "Light",
+            "btn-dark" : "Dark",
+            "btn-outline-primary" : "Outline Primary",
+            "btn-outline-secondary" : "Outline Secondary",
+            "btn-outline-success" : "Outline Success",
+            "btn-outline-danger" : "Outline Danger",
+            "btn-outline-warning" : "Outline Warning",
+            "btn-outline-info" : "Outline Info",
+            "btn-outline-light" : "Outline Light",
+            "btn-outline-dark" : "Outline Dark"
+        },
+        "style": {
+            "sizeblur": "Size and blur",
+            "gtocolor": "Grayscale to color"
+        },
+        "onClick": {
+            "fullimage":"fullimage", 
+            "openUrl":"openUrl"
+        },
+        "in_row": {
+            "12":"1 col",
+            "6":"2 cols",
+            "4":"3 cols",
+            "3":"4 cols",
+            "2":"6 cols",
+            "1":"12 cols"
+        },
+        "sub_sizes": {
+            "1":"1",
+            "2":"2",
+            "3":"3",
+            "4":"4",
+            "6":"6",
+            "12":"12"
+        },
+        "hover_effects": [
+            0,1,2,3,4,5,6,7,8,9,10,11
+        ]
+    }
+}

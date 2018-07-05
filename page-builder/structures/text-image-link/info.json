@@ -1,0 +1,23 @@
+{
+    "name": "text-image-link",
+    "title": "Image with text and button link",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "title": "",
+        "content": "",
+        "align":"center",
+        "img": "",
+        "buttonText": "",
+        "buttonUrl": ""
+    }
+}

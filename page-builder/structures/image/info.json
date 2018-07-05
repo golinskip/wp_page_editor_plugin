@@ -1,0 +1,38 @@
+{
+    "name": "image",
+    "title": "Single Image",
+    "author": "Paweł Golński",
+    "image": "image.png",
+    "parallax_speed": "0",
+    "assets": {
+        "js": "script.php",
+        "css": "style.php"
+    },
+    "show": {
+        "backend-preview": "backend-preview.php",
+        "backend-config": "backend-config.php",
+        "frontend": "frontend.php"
+    },
+    "default-cnf": {
+        "layout": "simple",
+        "urlType": "1",
+        "url": "http://via.placeholder.com/1280x300",
+        "align" : "center",
+        "width": "auto",
+        "height": "auto",
+        "link": ""
+    },
+    "attr": {
+        "layouts": {
+            "simple": "Simple", 
+            "parallax": "Parallax"
+        },
+        "align": {
+            "left" : "Left",
+            "right" : "Right",
+            "center" : "Center",
+            "justify" : "Justify",
+            "auto" : "Auto"
+        }
+    }
+}
