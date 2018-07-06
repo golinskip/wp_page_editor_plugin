@@ -12,6 +12,76 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
+    "config" : {
+            "caption" : {
+                "type" : "text",
+                "caption" : "Caption",
+                "default" : "",
+                "tab" : "Button"
+            },
+            "url" : {
+                "type" : "text",
+                "caption" : "Url",
+                "default" : "",
+                "tab" : "Button"
+            },
+            "style" : {
+                "type" : "options",
+                "caption": "Style",
+                "options" : {
+                    "btn-primary" : "Primary",
+                    "btn-secondary" : "Secondary",
+                    "btn-success" : "Success",
+                    "btn-danger" : "Danger",
+                    "btn-warning" : "Warning",
+                    "btn-info" : "Info",
+                    "btn-light" : "Light",
+                    "btn-dark" : "Dark",
+                    "btn-outline-primary" : "Outline Primary",
+                    "btn-outline-secondary" : "Outline Secondary",
+                    "btn-outline-success" : "Outline Success",
+                    "btn-outline-danger" : "Outline Danger",
+                    "btn-outline-warning" : "Outline Warning",
+                    "btn-outline-info" : "Outline Info",
+                    "btn-outline-light" : "Outline Light",
+                    "btn-outline-dark" : "Outline Dark"
+                },
+                "default" : "btn-primary",
+                "tab" : "Style"
+            },
+            "align" : {
+                "type" : "options",
+                "caption" : "Align",
+                "options" : {
+                    "left" : "left",
+                    "center" : "center",
+                    "right" : "right"
+                },
+                "default" : "left",
+                "tab" : "Style"
+            },
+            "width" : {
+                "type" : "options",
+                "caption" : "Width",
+                "options" : {
+                    "normal": "Normal",
+                    "full": "Full width"
+                },
+                "default" : "normal",
+                "tab" : "Style"
+            },
+            "size" : {
+                "type" : "options",
+                "caption" : "Size",
+                "options" : {
+                    "normal": "Normal",
+                    "btn-sm": "Small",
+                    "btn-lg": "Large"
+                },
+                "default" : "normal",
+                "tab" : "Style"
+            }
+    },
     "default-cnf": {
         "caption": "",
         "url": "",

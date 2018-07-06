@@ -66,10 +66,6 @@ class wtst_page_builder_converter {
                     }
                 }
             }
-            
-//            if (stripos($temp->getAttribute('class'), $className) !== false) {
-//                
-//            }
         }
 
         return $nodes;
@@ -84,9 +80,9 @@ class wtst_page_builder_converter {
         $objCounter = 0;
         $out = '<div class="pb-canvas">';
         $out .= '<button id="pb-save" class="button button-primary">' . __('Save', 'wtst') . '<span class="dashicons dashicons-yes"></span></button>';
+        $out .= '<button id="pg-sec-add" class="pb-sec-add" >' . __('Add section', 'wtst') . '<span class="dashicons dashicons-plus"></span></button>';
         $out .= '<button id="pb-disable" class="button">' . __('Disable', 'wtst') . '<span class="dashicons dashicons-arrow-down"></span></button>';
         $out .= '<button id="pb-enable" class="button">' . __('Enable', 'wtst') . '<span class="dashicons dashicons-arrow-up"></span></button>';
-        $out .= '<button id="pg-sec-add" class="pb-sec-add" >' . __('Add section', 'wtst') . '<span class="dashicons dashicons-plus"></span></button>';
         $out .= '<div id="pb-canvas-content">';
         if (isset($input['sec']) && is_array($input['sec']))
             foreach ($input['sec'] as $curSection) {
@@ -124,11 +120,11 @@ class wtst_page_builder_converter {
         $config = ($config != null)?$config:$defaultCnf['sec'];
         $out = '<div class="pb-sec" data-config="' . htmlspecialchars(json_encode($config)) . '">';
         $out .= '<div class="pb-sec-header">
-                    <span class="pb-icon dashicons dashicons-plus      pb-col-add"></span>
-                    <span class="pb-icon dashicons dashicons-edit      pb-sec-edit"></span>
+                    <span class="pb-icon dashicons dashicons-move left pb-sec-mover"></span>
                     <span class="pb-icon dashicons dashicons-trash     pb-sec-remove"></span>
                     <span class="pb-icon dashicons dashicons-admin-page pb-sec-duplicate"></span>
-                    <span class="pb-icon dashicons dashicons-move left pb-sec-mover"></span>
+                    <span class="pb-icon dashicons dashicons-edit      pb-sec-edit"></span>
+                    <span class="pb-icon dashicons dashicons-plus      pb-col-add"></span>
                 </div>
                 <div class="pb-sec-body">';
         return $out;
@@ -141,11 +137,11 @@ class wtst_page_builder_converter {
         if($colSize == 13) $colSize = 12;
         $out  = '<div class="pb-col pb-col-' . $colSize . '" data-config="' . htmlspecialchars(json_encode($config)) . '">';
         $out .= '<div class="pb-col-header">
-                    <span class="pb-icon dashicons dashicons-plus  pb-obj-add"></span>
-                    <span class="pb-icon dashicons dashicons-edit  pb-col-edit"></span>
+                    <span class="pb-icon dashicons dashicons-move  pb-col-mover"></span>
                     <span class="pb-icon dashicons dashicons-trash pb-col-remove"></span>
                     <span class="pb-icon dashicons dashicons-admin-page pb-col-duplicate"></span>
-                    <span class="pb-icon dashicons dashicons-move  pb-col-mover"></span>
+                    <span class="pb-icon dashicons dashicons-edit  pb-col-edit"></span>
+                    <span class="pb-icon dashicons dashicons-plus  pb-obj-add"></span>
                 </div>
                 <div class="pb-col-body">';
         return $out;
@@ -156,10 +152,10 @@ class wtst_page_builder_converter {
         $out .= '<div class="pb-obj" data-type="' . $type . '" data-config="' . htmlspecialchars(json_encode($config)) . '">';
         $out .= '<div class="pb-obj-header">
                     <span class="">'.$type.'</span>
-                    <span class="pb-icon dashicons dashicons-edit      pb-obj-edit"></span>
+                    <span class="pb-icon dashicons dashicons-move left pb-obj-mover"></span>
                     <span class="pb-icon dashicons dashicons-trash     pb-obj-remove"></span>
                     <span class="pb-icon dashicons dashicons-admin-page pb-obj-duplicate"></span>
-                    <span class="pb-icon dashicons dashicons-move left pb-obj-mover"></span>
+                    <span class="pb-icon dashicons dashicons-edit      pb-obj-edit"></span>
                 </div>
                 <div class="pb-obj-body">';
         return $out;

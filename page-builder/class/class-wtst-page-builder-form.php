@@ -1,18 +1,9 @@
 <?php
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of class-wtst-page-builder-form
- *
- * @author Paweł
- */
-class wtst_page_builder_form {
+class wtst_page_builder_form
+{
     
-    public static function number($name, $value = '', $addParam = '', $customId = '') {
+    public static function number($name, $value = '', $addParam = '', $customId = '')
+    {
         if ($customId == "") {
             $customId = str_replace(['[', ']'], ['-','-'], $name);
         }
@@ -21,8 +12,8 @@ class wtst_page_builder_form {
         return $out;
     }
     
-    public static function text($name, $value = '', $multicolumn = false, $addParam = '', $customId = '') {
-        
+    public static function text($name, $value = '', $multicolumn = false, $addParam = '', $customId = '')
+    {    
         if ($customId == "") {
             $customId = str_replace(['[', ']'], ['-','-'], $name);
         }
@@ -37,9 +28,10 @@ class wtst_page_builder_form {
         return $out;
     }
     
-    public static function media_selector($name, $value = '', $customId = '') {
+    public static function media_selector($name, $value = '', $customId = '')
+    {
         $image = wp_get_attachment_image_src($value);
-        if ( $image ) {
+        if ($image) {
             list($src, $width, $height) = $image;
         }
         if ($customId == "") {
@@ -48,12 +40,12 @@ class wtst_page_builder_form {
         $no_image_src = plugin_dir_url(__FILE__) . '../img/noimage.png';
         $img_src= (isset($src))?$src:$no_image_src;
         $out = '';
-	$out.= '<div class="'.$name.'_image_preview_wrapper">';
-	$out.= '<img id="'.$customId.'_image_preview" src="'.$img_src.'" width="100" height="100" style="max-height: 100px; width: 100px;">';
-	$out.= '</div>';
-	$out.= '<input id="'.$customId.'_image_upload_button" type="button" class="button" value="'.__( 'Upload image' , 'wtst').'" />';
-	$out.= '<input id="'.$customId.'_image_reset_button" type="button" class="button" value="'.__( 'Reset', 'wtst' ).'" />';
-	$out.= '<input type="hidden" name="'.$name.'" id="'.$customId.'_image_att_id" value="'.$value.'" />';
+        $out.= '<div class="'.$name.'_image_preview_wrapper">';
+        $out.= '<img id="'.$customId.'_image_preview" src="'.$img_src.'" width="100" height="100" style="max-height: 100px; width: 100px;">';
+        $out.= '</div>';
+        $out.= '<input id="'.$customId.'_image_upload_button" type="button" class="button" value="' . __( 'Upload image', 'wtst').'" />';
+        $out.= '<input id="'.$customId.'_image_reset_button" type="button" class="button" value="' . __( 'Reset', 'wtst' ).'" />';
+        $out.= '<input type="hidden" name="'.$name.'" id="'.$customId.'_image_att_id" value="'.$value.'" />';
         $out.= "<script type='text/javascript'>
 		jQuery( document ).ready( function( $ ) {
 			// Uploading files

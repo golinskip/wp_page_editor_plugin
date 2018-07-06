@@ -23,7 +23,34 @@ $defaultCnf = [
         'txtstyle' => cnf_opts::TXT_STYLE_DEFAULT,
         'margin' => cnf_opts::YES,
     ],
-    'obj' => [],
+    'obj' => [
+        'config' => [
+            'margin_left' => [
+                'type' => 'number',
+                'caption' => 'Margin Left',
+                'default' => '0',
+                'tab' => 'Margin'
+            ],
+            'margin_right' => [
+                'type' => 'number',
+                'caption' => 'Margin Right',
+                'default' => '0',
+                'tab' => 'Margin'
+            ],
+            'margin_top' => [
+                'type' => 'number',
+                'caption' => 'Margin Top',
+                'default' => '0',
+                'tab' => 'Margin'
+            ],
+            'margin_bottom' => [
+                'type' => 'number',
+                'caption' => 'Margin Bottom',
+                'default' => '0',
+                'tab' => 'Margin'
+            ],
+        ]
+    ],
 ];
 $optionsCnf = [
     'sec' => [

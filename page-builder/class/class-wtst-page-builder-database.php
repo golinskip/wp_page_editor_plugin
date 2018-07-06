@@ -1,8 +1,8 @@
 <?php
+class wtst_page_builder_database
+{
 
-class wtst_page_builder_database {
-
-    const dbVersion = '1.0';
+    const DB_VERSION = '1.0';
 
     protected $wpdb = null;
     protected $collate;
@@ -126,7 +126,7 @@ class wtst_page_builder_database {
         dbDelta($sqlA);
         dbDelta($sqlB);
 
-        add_option('wtst_pb_db_version', self::dbVersion);
+        add_option('wtst_pb_db_version', self::DB_VERSION);
     }
 
     public function installData() {
