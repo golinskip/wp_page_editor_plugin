@@ -12,12 +12,18 @@ class wtst_page_builder_structures {
             return false;
         }
         $struct = self::$structures[$structType];
-        if(!isset($struct['default-cnf'])) {
-            return false;
+        if(isset($struct['default-cnf'])) {
+            foreach($struct['default-cnf'] as $key => $defValue) {
+                if(!isset($cnf[$key])) {
+                    $cnf[$key] = $defValue;
+                }
+            }
         }
-        foreach($struct['default-cnf'] as $key => $defValue) {
-            if(!isset($cnf[$key])) {
-                $cnf[$key] = $defValue;
+        if(isset($struct['config'])) {
+            foreach($struct['config'] as $cnfKey => $cnfDetails) {
+                if(!isset($cnf[$cnfKey])) {
+                    $cnf[$cnfKey] = $cnfDetails['default'];
+                }
             }
         }
         return $cnf;

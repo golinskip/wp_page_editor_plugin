@@ -24,26 +24,17 @@ $cssPrfx = "wtst-pb-struct-img-";
     }
 </style>
 <div class="<?php echo $cssPrfx; ?>img-container">
-    <?php if($cnf['source'] == 'grid-kit' && is_plugin_active('portfolio-wp/portfolio-wp.php')): ?>
-        [gkit id=<?php echo $cnf['grid_kit_galery']; ?>]
-    <?php else: ?>
-    <?php for($i=0; $i<$cnf['num_of_slides']; $i++): ?>
-            <?php if(isset($cnf['slides'][$i])) {
-                $curSlide = $cnf['slides'][$i];
+    <?php foreach($cnf['slides'] as $curSlide): ?>
+        <img class="<?php echo $cssPrfx; ?>image" src="<?php
+            if((int)$curSlide['media_id'] > 0) {
+                $image = wp_get_attachment_image_src($curSlide['media_id']);
+                if ( $image ) {
+                    list($src, $width, $height) = $image;
+                }
+                echo $src;
             } else {
-                $curSlide = $structData['default-cnf']['slides'][0];
-            }?>
-    <img class="<?php echo $cssPrfx; ?>image" src="<?php
-        if($curSlide['media_type'] == 2) {
-            $image = wp_get_attachment_image_src($curSlide['media_id']);
-            if ( $image ) {
-                list($src, $width, $height) = $image;
+                echo $curSlide['media_url'];
             }
-            echo $src;
-        } else {
-            echo $curSlide['media_url'];
-        }
-    ?>" alt="<?php echo $curSlide['title']; ?>" />
-    <?php endfor; ?>
-    <?php endif; ?>
+        ?>" alt="<?php echo $curSlide['title']; ?>" />
+    <?php endforeach; ?>
 </div>

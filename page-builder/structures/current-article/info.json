@@ -12,7 +12,16 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
-    "default-cnf": {
-        "show_title": 0
-    }
+    "config" : {
+            "show_title" : {
+                "type" : "options",
+                "caption" : "Show Title",
+                "default" : "0",
+                "tab" : "Options",
+                "options" :{
+                    "0": "No",
+                    "1": "Yes"
+                }
+            }
+        }
 }

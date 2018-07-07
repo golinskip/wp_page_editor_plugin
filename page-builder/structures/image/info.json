@@ -13,26 +13,69 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
-    "default-cnf": {
-        "layout": "simple",
-        "urlType": "1",
-        "url": "http://via.placeholder.com/1280x300",
-        "align" : "center",
-        "width": "auto",
-        "height": "auto",
-        "link": ""
-    },
-    "attr": {
-        "layouts": {
-            "simple": "Simple", 
-            "parallax": "Parallax"
-        },
-        "align": {
-            "left" : "Left",
-            "right" : "Right",
-            "center" : "Center",
-            "justify" : "Justify",
-            "auto" : "Auto"
+    "config" : {
+            "urlType" : {
+                "type" : "options",
+                "caption" : "Url Type",
+                "default" : "1",
+                "tab" : "Image",
+                "options": {
+                    "1": "Url", 
+                    "2": "Media"
+                }
+            },
+            "url" : {
+                "type" : "text",
+                "caption" : "Url",
+                "default" : "",
+                "tab" : "Image"
+            },
+            "media_id" : {
+                "type" : "media",
+                "caption" : "Media",
+                "default" : "",
+                "tab" : "Image"
+            },
+            "link" : {
+                "type" : "text",
+                "caption" : "Link",
+                "default" : "",
+                "tab" : "Image"
+            },
+            "layout" : {
+                "type" : "options",
+                "caption" : "Layout",
+                "default" : "simple",
+                "tab" : "Style",
+                "options": {
+                    "simple": "Simple", 
+                    "parallax": "Parallax"
+                }
+            },
+            "align" : {
+                "type" : "options",
+                "caption" : "Align",
+                "options" : {
+                    "left" : "Left",
+                    "right" : "Right",
+                    "center" : "Center",
+                    "justify" : "Justify",
+                    "auto" : "Auto"
+                },
+                "default" : "center",
+                "tab" : "Style"
+            },
+            "width" : {
+                "type" : "text",
+                "caption" : "Width",
+                "default" : "auto",
+                "tab" : "Style"
+            },
+            "height" : {
+                "type" : "text",
+                "caption" : "Height",
+                "default" : "auto",
+                "tab" : "Style"
+            }
         }
-    }
 }

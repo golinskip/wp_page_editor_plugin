@@ -1,14 +1,32 @@
 <?php
 class wtst_page_builder_form
 {
+    protected static $globalIDIndex = [];
+    protected static function preventUniqueID($name) {
+        if(!isset(self::$globalIDIndex[$name])) {
+            self::$globalIDIndex[$name] = true;
+            return $name;
+        } else {
+            $i=0;
+            while(true) {
+                $checkedID = $name."_".$i;
+                if(!isset(self::$globalIDIndex[$checkedID])) {
+                    self::$globalIDIndex[$checkedID] = true;
+                    return $checkedID;
+                }
+                $i++;
+            }
+         }
+    }
     
     public static function number($name, $value = '', $addParam = '', $customId = '')
     {
         if ($customId == "") {
             $customId = str_replace(['[', ']'], ['-','-'], $name);
         }
+        $customId = self::preventUniqueID($customId);
         $out = '';
-        $out.='<input id="'.$customId.'" type="number" name="'.$name.'" value="'.$value.'" '.$addParam.'/>';
+        $out.='<input class="wtst-form-controll" id="'.$customId.'" type="number" name="'.$name.'" value="'.$value.'" '.$addParam.'/>';
         return $out;
     }
     
@@ -17,13 +35,14 @@ class wtst_page_builder_form
         if ($customId == "") {
             $customId = str_replace(['[', ']'], ['-','-'], $name);
         }
+        $customId = self::preventUniqueID($customId);
         $out = '';
         if($multicolumn) {
-            $out.='<textarea id="'.$customId.'" name="'.$name.'" style="width:100%; min-height:400px;">';
+            $out.='<textarea class="wtst-form-controll" id="'.$customId.'" name="'.$name.'" style="width:100%; min-height:400px;">';
             $out.= $value;
             $out.='</textarea>';
         } else {
-            $out.='<input id="'.$customId.'" type="text" name="'.$name.'" value="'.$value.'" '.$addParam.'/>';
+            $out.='<input class="wtst-form-controll" id="'.$customId.'" type="text" name="'.$name.'" value="'.$value.'" '.$addParam.'/>';
         }
         return $out;
     }
@@ -37,6 +56,7 @@ class wtst_page_builder_form
         if ($customId == "") {
             $customId = str_replace(['[', ']'], ['-','-'], $name);
         }
+        $customId = self::preventUniqueID($customId);
         $no_image_src = plugin_dir_url(__FILE__) . '../img/noimage.png';
         $img_src= (isset($src))?$src:$no_image_src;
         $out = '';
@@ -45,7 +65,7 @@ class wtst_page_builder_form
         $out.= '</div>';
         $out.= '<input id="'.$customId.'_image_upload_button" type="button" class="button" value="' . __( 'Upload image', 'wtst').'" />';
         $out.= '<input id="'.$customId.'_image_reset_button" type="button" class="button" value="' . __( 'Reset', 'wtst' ).'" />';
-        $out.= '<input type="hidden" name="'.$name.'" id="'.$customId.'_image_att_id" value="'.$value.'" />';
+        $out.= '<input class="wtst-form-controll" type="hidden" name="'.$name.'" id="'.$customId.'_image_att_id" value="'.$value.'" />';
         $out.= "<script type='text/javascript'>
 		jQuery( document ).ready( function( $ ) {
 			// Uploading files
@@ -113,10 +133,11 @@ class wtst_page_builder_form
      */
     public static function options($name, $options = [], $value = 0, $addParam = '', $customId = '') {
         if ($customId == "") {
-            $customId = $name;
+            $customId = str_replace(['[', ']'], ['-','-'], $name);
         }
+        $customId = self::preventUniqueID($customId);
         $out = '';
-        $out.='<select id="'.$customId.'" name="'.$name.'" '.$addParam.'>';
+        $out.='<select class="wtst-form-controll" id="'.$customId.'" name="'.$name.'" '.$addParam.'>';
         foreach($options as $val => $label) {
             $sel = ($val == $value)?' selected="selected"':'';
             $out.='<option value="'.$val.'"'.$sel.'>';

@@ -26,11 +26,11 @@ foreach($formData as $element) {
 
 <?php foreach($tabs as $tabKey => $tab): ?>
     <div id="<?php echo $tabKey?>">
-    <?php foreach($formData as $element): if($element['tab'] != $tab) continue;?>
-        <?php
-            
-        ?>
-    <?php endforeach; ?>
+    <?php foreach($formData as $keyName => $element) {
+         if($element['tab'] != $tab) continue;
+         $inputName = $keyName;
+         include __DIR__ . DS . "dialog-obj-edit-form-controll.php";
+    } ?>
     </div>
 <?php endforeach; ?>
 </div>

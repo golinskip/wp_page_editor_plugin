@@ -9,15 +9,8 @@ $sumsize = 0;
 ?>
 
 <div class="row nopadding wtst-pb-portfolio wtst-pb-portfolio-<?php echo $cnf['style']; ?>">
-        <?php for ($i = 0; $i < $cnf['num_of_slides']; $i++): ?>
-            <?php
-                if (isset($cnf['slides'][$i])) {
-                    $curSlide = $cnf['slides'][$i];
-                } else {
-                    $curSlide = $structData['default-cnf']['slides'][0];
-                }
-                
-                if ($curSlide['media_type'] == 2) {
+        <?php foreach($cnf['slides'] as $curSlide):
+                if((int)$curSlide['media_id'] > 0) {
                     $image = wp_get_attachment_image_src($curSlide['media_id'], "large");
                     $imageFull = wp_get_attachment_image_src($curSlide['media_id'], "full");
                     if ($image) {
@@ -79,7 +72,7 @@ $sumsize = 0;
                 <?php if(strlen($curSlide['url']) > 2):?></a><?php endif; ?>
                 <?php endif; ?>
             </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
     <?php if($addReadMore):?>
     <div class="col-md-12 text-center">
         <button type="button" class="btn wtst-pb-portfolio-hidden-show <?php echo $cnf['button_style']; ?>"  role="button"><?php echo $cnf['read_more_caption'];?> <i class="fas fa-angle-double-down"></i></button>

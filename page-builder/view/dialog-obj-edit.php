@@ -5,7 +5,6 @@ if (!defined('WPINC')) {
 ?>
 
 <form method="post" action="" id="pb-sec-edit-form">
-        <?php submit_button();?>
         <?php 
         if(isset($structData['config'])) {
             global $defaultCnf;
@@ -16,6 +15,7 @@ if (!defined('WPINC')) {
         }
          ?>
         <hr class="pb-clearfix">
+        <?php submit_button();?>
 </form>
 
 <script type="text/javascript">

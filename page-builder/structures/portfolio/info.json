@@ -12,76 +12,150 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
-    "default-cnf": {
-        "num_of_slides": "1",
-        "in_row": "3",
-        "on_click": "fullimage",
-        "default_link_caption": "Read more",
-        "read_more_after": 0,
-        "read_more_caption" : "Read more",
-        "button_style": "btn-primary",
-        "default_title": "Title",
-        "source": "local",
-        "height" : "400",
-        "padding" : "0",
-        "style": "sizeblur",
-        "slides": [
-            {
-                "media_type": 1,
-                "size" : 1,
-                "media_url": "http://via.placeholder.com/1280x300",
-                "title": "",
-                "link_caption": "",
-                "url": "#",
-                "custom_height" : "0"
+    "config": {
+        "in_row" : {
+            "type" : "options",
+            "caption" : "Images in row",
+            "options": {
+                "12":"1 col",
+                "6":"2 cols",
+                "4":"3 cols",
+                "3":"4 cols",
+                "2":"6 cols",
+                "1":"12 cols"
+            },
+            "default" :"4",
+            "tab" : "Options"
+        },
+        "on_click" : {
+            "type" : "options",
+            "caption" : "On click",
+            "options": {
+                "fullimage":"fullimage", 
+                "openUrl":"openUrl"
+            },
+            "default" :"fullimage",
+            "tab" : "Options"
+        },
+        "default_title" : {
+            "type" : "text",
+            "caption" : "Default title",
+            "default" : "",
+            "tab" : "Options"
+        },
+        "default_link_caption" : {
+            "type" : "text",
+            "caption" : "Default caption",
+            "default" : "Show",
+            "tab" : "Options"
+        },
+        "read_more_caption" : {
+            "type" : "text",
+            "caption" : "Read More Caption",
+            "default" : "Read More",
+            "tab" : "Options"
+        },
+        "read_more_after" : {
+            "type" : "number",
+            "caption" : "Show read more after elements",
+            "default" : "0",
+            "tab" : "Options"
+        },
+        "button_style" : {
+            "type" : "options",
+            "caption" : "Read More button style",
+            "options": {
+                "btn-primary" : "Primary",
+                "btn-secondary" : "Secondary",
+                "btn-success" : "Success",
+                "btn-danger" : "Danger",
+                "btn-warning" : "Warning",
+                "btn-info" : "Info",
+                "btn-light" : "Light",
+                "btn-dark" : "Dark",
+                "btn-outline-primary" : "Outline Primary",
+                "btn-outline-secondary" : "Outline Secondary",
+                "btn-outline-success" : "Outline Success",
+                "btn-outline-danger" : "Outline Danger",
+                "btn-outline-warning" : "Outline Warning",
+                "btn-outline-info" : "Outline Info",
+                "btn-outline-light" : "Outline Light",
+                "btn-outline-dark" : "Outline Dark"
+            },
+            "default" :"btn-primary",
+            "tab" : "Style"
+        },
+        "style" : {
+            "type" : "options",
+            "caption" : "Style",
+            "options": {
+                "sizeblur": "Size and blur",
+                "gtocolor": "Grayscale to color"
+            },
+            "default" :"sizeblur",
+            "tab" : "Style"
+        },
+        "height" : {
+            "type" : "text",
+            "caption" : "Height",
+            "default" :"400px",
+            "tab" : "Style"
+        },
+        "padding" : {
+            "type" : "text",
+            "caption" : "Padding",
+            "default" :"0",
+            "tab" : "Style"
+        },
+        "slides" : {
+            "type" : "collection",
+            "tab" : "Elements",
+            "default": "1",
+            "components": {
+                "media_id" : {
+                    "type" : "media",
+                    "caption" : "Image",
+                    "default" : ""
+                },
+                "media_url" : {
+                    "type" : "text",
+                    "caption" : "Image URL (used if Image is unset)",
+                    "default" : ""
+                },
+                "title" : {
+                    "type" : "text",
+                    "caption" : "Title",
+                    "default" :""
+                },
+                "link_caption" : {
+                    "type" : "text",
+                    "caption" : "Link Caption",
+                    "default" :""
+                },
+                "url" : {
+                    "type" : "text",
+                    "caption" : "Link URL",
+                    "default" :"#"
+                },
+                "size" : {
+                    "type" : "options",
+                    "caption" : "Width",
+                    "default" :"1",
+                    "options": {
+                        "1":"1",
+                        "2":"2",
+                        "3":"3",
+                        "4":"4",
+                        "6":"6",
+                        "12":"12"
+                    }
+                },
+                "custom_height" : {
+                    "type" : "text",
+                    "caption" : "Height",
+                    "default" :""
+                }
             }
-        ] 
-    },
-    "attr": {
-        "button_style": {
-            "btn-primary" : "Primary",
-            "btn-secondary" : "Secondary",
-            "btn-success" : "Success",
-            "btn-danger" : "Danger",
-            "btn-warning" : "Warning",
-            "btn-info" : "Info",
-            "btn-light" : "Light",
-            "btn-dark" : "Dark",
-            "btn-outline-primary" : "Outline Primary",
-            "btn-outline-secondary" : "Outline Secondary",
-            "btn-outline-success" : "Outline Success",
-            "btn-outline-danger" : "Outline Danger",
-            "btn-outline-warning" : "Outline Warning",
-            "btn-outline-info" : "Outline Info",
-            "btn-outline-light" : "Outline Light",
-            "btn-outline-dark" : "Outline Dark"
-        },
-        "style": {
-            "sizeblur": "Size and blur",
-            "gtocolor": "Grayscale to color"
-        },
-        "onClick": {
-            "fullimage":"fullimage", 
-            "openUrl":"openUrl"
-        },
-        "in_row": {
-            "12":"1 col",
-            "6":"2 cols",
-            "4":"3 cols",
-            "3":"4 cols",
-            "2":"6 cols",
-            "1":"12 cols"
-        },
-        "sub_sizes": {
-            "1":"1",
-            "2":"2",
-            "3":"3",
-            "4":"4",
-            "6":"6",
-            "12":"12"
-        },
-        "hover_effects": [
-            0,1,2,3,4,5,6,7,8,9,10,11
-        ]
+        }
     }
 }
