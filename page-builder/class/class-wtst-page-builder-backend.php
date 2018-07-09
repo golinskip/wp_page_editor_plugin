@@ -18,6 +18,7 @@ class wtst_page_builder_backend {
         
         wp_enqueue_script('jquery-serialize-object-3', plugin_dir_url(__FILE__) . '../js/jquery.serialize-object.js');
         wp_enqueue_script('wtst-page-builder', plugin_dir_url(__FILE__) . '../js/wtst-page-builder.js');
+        wp_enqueue_script('wtst-pb-edit-tools', plugin_dir_url(__FILE__) . '../js/wtst-pb-edit-tools.js');
         wp_enqueue_style ('wtst-page-builder', plugin_dir_url(__FILE__) . '../css/wtst-page-builder.css');
         wp_localize_script(
             'ajax-script',

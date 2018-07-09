@@ -112,6 +112,11 @@
             "tab" : "Elements",
             "default": "1",
             "components": {
+                "title" : {
+                    "type" : "text",
+                    "caption" : "Title",
+                    "default" :""
+                },
                 "media_id" : {
                     "type" : "media",
                     "caption" : "Image",
@@ -121,11 +126,6 @@
                     "type" : "text",
                     "caption" : "Image URL (used if Image is unset)",
                     "default" : ""
-                },
-                "title" : {
-                    "type" : "text",
-                    "caption" : "Title",
-                    "default" :""
                 },
                 "link_caption" : {
                     "type" : "text",
