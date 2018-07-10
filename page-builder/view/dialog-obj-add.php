@@ -12,7 +12,7 @@ if (!defined('WPINC')) {
             <div class="pb-obj-add-thumbnail-grid">
                 <label>
                 <p> 
-                    <input type="radio" name="structure" value="<?php echo $struct['name']; ?>">
+                    <input type="radio" name="structure" value="<?php echo $struct['name']; ?>"  data-title="<?php echo $struct['title']; ?>">
                     <?php echo $struct['title']; ?>
                 </p>
                 <p>
@@ -23,12 +23,15 @@ if (!defined('WPINC')) {
         <?php endforeach; ?>
         <hr class="pb-clearfix">
         <?php submit_button();?>
+        <input type="hidden" name="structure_title" class="pb-obj-add-structure-title"/>
 </form>
 
 <script type="text/javascript">
     (function ($) {
         $(function () {
-            $('#bgcolor').wpColorPicker();
+            $('.pb-obj-add-thumbnail-grid input[name=structure]').click(function(){
+                $('.pb-obj-add-structure-title').val($(this).attr('data-title'));
+            });
         });
     })(jQuery);
 </script>

@@ -14,6 +14,8 @@ class wtst_page_builder_frontend {
     const OBJ_ID_PREFIX = "wtst-pg-obj-";
 
     public function load($type = '', $type_id = 0) {
+        wp_enqueue_script('aos', plugin_dir_url(__FILE__) . '../js/aos.js');
+        wp_enqueue_style('aos', plugin_dir_url(__FILE__) . '../css/aos.css');
         if ($this->obj === null) {
             $objectCounter = 0;
             if($type === ''){
@@ -90,7 +92,7 @@ class wtst_page_builder_frontend {
     }
     
     public function enqueue_script() {
-        echo '<script type="text/javascript">';
+        echo '<script type="text/javascript">AOS.init();';
         echo $this->allJs;
         echo '</script>';
     }

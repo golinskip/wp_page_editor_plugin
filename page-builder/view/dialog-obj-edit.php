@@ -17,11 +17,3 @@ if (!defined('WPINC')) {
         <hr class="pb-clearfix">
         <?php submit_button();?>
 </form>
-
-<script type="text/javascript">
-    (function ($) {
-        $(function () {
-            $('#bgcolor').wpColorPicker();
-        });
-    })(jQuery);
-</script>

@@ -27,27 +27,82 @@ $defaultCnf = [
         'config' => [
             'margin_left' => [
                 'type' => 'number',
-                'caption' => 'Margin Left',
+                'caption' => 'Margin Left (px)',
                 'default' => '0',
-                'tab' => 'Margin'
+                'tab' => 'Spacing'
             ],
             'margin_right' => [
                 'type' => 'number',
-                'caption' => 'Margin Right',
+                'caption' => 'Margin Right (px)',
                 'default' => '0',
-                'tab' => 'Margin'
+                'tab' => 'Spacing'
             ],
             'margin_top' => [
                 'type' => 'number',
-                'caption' => 'Margin Top',
+                'caption' => 'Margin Top (px)',
                 'default' => '0',
-                'tab' => 'Margin'
+                'tab' => 'Spacing'
             ],
             'margin_bottom' => [
                 'type' => 'number',
-                'caption' => 'Margin Bottom',
+                'caption' => 'Margin Bottom (px)',
                 'default' => '0',
-                'tab' => 'Margin'
+                'tab' => 'Spacing'
+            ],
+            'padding_left' => [
+                'type' => 'number',
+                'caption' => 'Padding Left (px)',
+                'default' => '0',
+                'tab' => 'Spacing'
+            ],
+            'padding_right' => [
+                'type' => 'number',
+                'caption' => 'Padding Right (px)',
+                'default' => '0',
+                'tab' => 'Spacing'
+            ],
+            'padding_top' => [
+                'type' => 'number',
+                'caption' => 'Padding Top (px)',
+                'default' => '0',
+                'tab' => 'Spacing'
+            ],
+            'padding_bottom' => [
+                'type' => 'number',
+                'caption' => 'Padding Bottom (px)',
+                'default' => '0',
+                'tab' => 'Spacing'
+            ],
+            'aos_animation' => [
+                'type' => 'options',
+                'caption' => 'Animation on show',
+                'options' => [
+                    'none' => "No animation",
+                    'fade-up' => "Fade up",
+                    'fade-down' => "Fade down",
+                    'fade-right' => "Fade right",
+                    'fade-left' => "Fade left",
+                    'fade-up-left' => "Fade up left",
+                    'fade-up-right' => "Fade up right",
+                    'fade-down-left' => "Fade down left",
+                    'fade-down-right' => "Fade down right",
+                    'flip-up' => "Flip up",
+                    'flip-down' => "Flip down",
+                    'flip-left' => "Flip left",
+                    'flip-right' => "Flip right",
+                    'zoom-in' => "Zoom in",
+                    'zoom-in-left' => "Zoom in left",
+                    'zoom-in-right' => "Zoom in right",
+                    'zoom-in-up' => "Zoom in up",
+                    'zoom-in-down' => "Zoom in down",
+                    'zoom-out' => "Zoom out",
+                    'zoom-out-left' => "Zoom out left",
+                    'zoom-out-right' => "Zoom out right",
+                    'zoom-out-up' => "Zoom out up",
+                    'zoom-out-down' => "Zoom out down",
+                ],
+                'default' => 'none',
+                'tab' => 'Animation'
             ],
         ]
     ],

@@ -257,6 +257,7 @@
                     colHdl.find(' .pb-col-body').append(newObj);
                     var newObjH = colHdl.find(' .pb-col-body .pb-obj:last');
                     newObjH.attr('data-type', params.structure);
+                    newObjH.find('.pb-obj-title').html(params.structure_title);
                     var data = {
                         action: 'wtst_pb_dialog_obj_preview',
                         config: '{}',
