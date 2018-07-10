@@ -14,25 +14,21 @@
         "frontend": "frontend.php"
     },
     "config" : {
-            "urlType" : {
-                "type" : "options",
-                "caption" : "Url Type",
-                "default" : "1",
-                "tab" : "Image",
-                "options": {
-                    "1": "Url", 
-                    "2": "Media"
-                }
-            },
-            "url" : {
-                "type" : "text",
-                "caption" : "Url",
-                "default" : "",
-                "tab" : "Image"
-            },
             "media_id" : {
                 "type" : "media",
                 "caption" : "Media",
+                "default" : "",
+                "tab" : "Image"
+            },
+            "media_url" : {
+                "type" : "text",
+                "caption" : "Image URL (used if Image is unset)",
+                "default" : "",
+                "tab" : "Image"
+            },
+            "alt" : {
+                "type" : "text",
+                "caption" : "Alternative text",
                 "default" : "",
                 "tab" : "Image"
             },

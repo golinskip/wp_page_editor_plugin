@@ -6,27 +6,27 @@ if (!defined('WPINC')) {
 
 <div class="wtst-pb-swipe-card"> 
     <div class="front">
-        <?php if(strlen($cnf['side1']['link']) > 0 ): ?><a href="<?php echo $cnf['side1']['link']; ?>"><?php endif; ?>
+        <?php if(strlen($cnf['link_1']) > 0 ): ?><a href="<?php echo $cnf['link_1']; ?>"><?php endif; ?>
         <div class='wtst-pb-swipe-card-content'>
-        <?php if(strlen($cnf['side1']['title']) > 0): ?>
-            <h4><?php echo $cnf['side1']['title']; ?></h4>
+        <?php if(strlen($cnf['title_1']) > 0): ?>
+            <h4><?php echo $cnf['title_1']; ?></h4>
         <?php endif; ?>
-        <?php if(strlen($cnf['side1']['description']) > 0): ?>
-            <p><?php echo $cnf['side1']['description']; ?></p>
+        <?php if(strlen($cnf['description_1']) > 0): ?>
+            <p><?php echo $cnf['description_1']; ?></p>
         <?php endif; ?>
         </div>
-        <?php if(strlen($cnf['side1']['link']) > 0 ): ?></a><?php endif; ?>
+        <?php if(strlen($cnf['link_1']) > 0 ): ?></a><?php endif; ?>
     </div> 
     <div class="back">
-        <?php if(strlen($cnf['side2']['link']) > 0 ): ?><a href="<?php echo $cnf['side2']['link']; ?>"><?php endif; ?>
+        <?php if(strlen($cnf['link_2']) > 0 ): ?><a href="<?php echo $cnf['link_2']; ?>"><?php endif; ?>
         <div class='wtst-pb-swipe-card-content'>
-        <?php if(strlen($cnf['side2']['title']) > 0): ?>
-            <h4><?php echo $cnf['side2']['title']; ?></h4>
+        <?php if(strlen($cnf['title_2']) > 0): ?>
+            <h4><?php echo $cnf['title_2']; ?></h4>
         <?php endif; ?>
-        <?php if(strlen($cnf['side2']['description']) > 0): ?>
-            <p><?php echo $cnf['side2']['description']; ?></p>
+        <?php if(strlen($cnf['description_2']) > 0): ?>
+            <p><?php echo $cnf['description_2']; ?></p>
         <?php endif; ?>
         </div>
-        <?php if(strlen($cnf['side2']['link']) > 0 ): ?></a><?php endif; ?>
+        <?php if(strlen($cnf['link_2']) > 0 ): ?></a><?php endif; ?>
     </div> 
 </div>

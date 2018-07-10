@@ -12,43 +12,65 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
-    "default-cnf": {
-        "title": "",
-        "title_url": "",
-        "hr_after": 1,
-        "content": "",
-        "align": "left",
-        "style": "default",
-        "font_size": "1em",
-        "margin_top": "0",
-        "margin_left": "0",
-        "margin_right": "0",
-        "margin_bottom": "0"
-    },
-    "attr": {
-        "styles": {
-            "default":"default", 
-            "colored":"colored"
+    "config" : {
+        "title" : {
+            "type" : "text",
+            "caption" : "Title",
+            "default" :"",
+            "tab" : "Content"
         },
-        "align": {
-            "left" : "left",
-            "right" : "right",
-            "center" : "center",
-            "justify" : "justify",
-            "auto" : "auto"
+        "title_url" : {
+            "type" : "text",
+            "caption" : "Title URL",
+            "default" :"",
+            "tab" : "Content"
         },
-        "logic": {
-            "0":"No",
-            "1":"Yes"
+        "hr_after" : {
+            "type" : "boolean",
+            "caption" : "Show separator",
+            "default" : 0,
+            "tab" : "Content"
         },
-        "font_size": {
-            "0.5em": "0.5em",
-            "0.8em": "0.8em",
-            "1em": "1em",
-            "1.2em": "1.2em",
-            "1.4em": "1.4em",
-            "1.6em": "1.6em",
-            "1.7em": "1.7em"
+        "content" : {
+            "type" : "textbox",
+            "caption" : "Content",
+            "default" :"",
+            "tab" : "Content"
+        },
+        "style" : {
+            "type" : "options",
+            "caption" : "Style",
+            "options" : {
+                "default":"default", 
+                "colored":"colored"
+            },
+            "tab" : "Style"
+        },
+        "font_size" : {
+            "type" : "options",
+            "caption" : "Font size",
+            "options" : {
+                "0.5em": "0.5em",
+                "0.8em": "0.8em",
+                "1em": "1em",
+                "1.2em": "1.2em",
+                "1.4em": "1.4em",
+                "1.6em": "1.6em",
+                "1.7em": "1.7em"
+            },
+            "tab" : "Style"
+        },
+        "align" : {
+            "type" : "options",
+            "caption" : "Text align",
+            "options" : {
+                "left" : "left",
+                "right" : "right",
+                "center" : "center",
+                "justify" : "justify",
+                "auto" : "auto"
+            },
+            "tab" : "Style"
         }
     }
 }

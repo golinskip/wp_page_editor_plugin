@@ -1,4 +1,4 @@
-{
+ {
     "name": "swipe-card",
     "title": "Swipe Card",
     "author": "Paweł Golński",
@@ -12,24 +12,90 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
-    "default-cnf": {
-        "side1": {
-            "title": "",
-            "description": "",
-            "link":"",
-            "color":"",
-            "imgType": "1",
-            "imgUrl": "http://via.placeholder.com/1280x300"
+    "config": {
+        "width" : {
+            "type" : "text",
+            "caption" : "Width",
+            "default" : "100%",
+            "tab" : "Options"
         },
-        "side2": {
-            "title": "",
-            "description": "",
-            "link":"",
-            "color":"",
-            "imgType": "1",
-            "imgUrl": "http://via.placeholder.com/1280x300"
+        "height" : {
+            "type" : "text",
+            "caption" : "Height",
+            "default" : "300px",
+            "tab" : "Options"
         },
-        "width": "100%",
-        "height": "300px"
+        "title_1" : {
+            "type" : "text",
+            "caption" : "Title",
+            "default" : "Side A",
+            "tab" : "Slide_1"
+        },
+        "media_id_1" : {
+            "type" : "media",
+            "caption" : "Image",
+            "default" : "",
+            "tab" : "Slide_1"
+        },
+        "media_url_1" : {
+            "type" : "text",
+            "caption" : "Image URL (used if Image is unset)",
+            "default" : "",
+            "tab" : "Slide_1"
+        },
+        "color_1" : {
+            "type" : "color_picker",
+            "caption" : "Color",
+            "default" : "#656565",
+            "tab" : "Slide_1"
+        },
+        "description_1" : {
+            "type" : "text",
+            "caption" : "Description",
+            "default" : "",
+            "tab" : "Slide_1"
+        },
+        "link_1" : {
+            "type" : "text",
+            "caption" : "Link",
+            "default" : "#",
+            "tab" : "Slide_1"
+        },
+        "title_2" : {
+            "type" : "text",
+            "caption" : "Title",
+            "default" : "Side B",
+            "tab" : "Slide_2"
+        },
+        "media_id_2" : {
+            "type" : "media",
+            "caption" : "Image",
+            "default" : "",
+            "tab" : "Slide_2"
+        },
+        "media_url_2" : {
+            "type" : "text",
+            "caption" : "Image URL (used if Image is unset)",
+            "default" : "",
+            "tab" : "Slide_2"
+        },
+        "color_2" : {
+            "type" : "color_picker",
+            "caption" : "Color",
+            "default" : "#656565",
+            "tab" : "Slide_2"
+        },
+        "description_2" : {
+            "type" : "text",
+            "caption" : "Description",
+            "default" : "",
+            "tab" : "Slide_2"
+        },
+        "link_2" : {
+            "type" : "text",
+            "caption" : "Link",
+            "default" : "#",
+            "tab" : "Slide_2"
+        }
     }
 }

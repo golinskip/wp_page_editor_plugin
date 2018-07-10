@@ -2,15 +2,15 @@
 if (!defined('WPINC')) {
     die;
 }
-        if($cnf['urlType'] == 2) {
-            $image = wp_get_attachment_image_src($cnf['media_id'], 'full');
-            if ( $image ) {
-                list($src, $width, $height) = $image;
-            }
-            $imgUrl = $src;
-        } else {
-            $imgUrl = $cnf['url'];
-        }
+if((int)$cnf['media_id'] > 0) {
+    $image = wp_get_attachment_image_src($cnf['media_id'], 'full');
+    if ( $image ) {
+        list($src, $width, $height) = $image;
+    }
+    $imgUrl = $src;
+} else {
+    $imgUrl = $cnf['media_url'];
+}
 ?>
 <?php if(strlen($cnf['link']) > 2): ?><a href="<?php echo $cnf['link']; ?>"><?php endif; ?>
 <?php if($cnf['layout'] == 'parallax'): ?>

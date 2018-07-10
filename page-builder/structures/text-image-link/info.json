@@ -12,12 +12,66 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
-    "default-cnf": {
-        "title": "",
-        "content": "",
-        "align":"center",
-        "img": "",
-        "buttonText": "",
-        "buttonUrl": ""
+    "config" : {
+        "title" : {
+            "type" : "text",
+            "caption" : "Title",
+            "default" :"",
+            "tab" : "Content"
+        },
+        "align" : {
+            "type" : "options",
+            "caption" : "Text align",
+            "options" : {
+                "left" : "left",
+                "right" : "right",
+                "center" : "center",
+                "justify" : "justify",
+                "auto" : "auto"
+            },
+            "tab" : "Content"
+        },
+        "content" : {
+            "type" : "textbox",
+            "caption" : "Description",
+            "default" :"",
+            "tab" : "Content"
+        },
+        "button_text" : {
+            "type" : "text",
+            "caption" : "Button text",
+            "default" :"",
+            "tab" : "Content"
+        },
+        "button_url" : {
+            "type" : "text",
+            "caption" : "Button URL",
+            "default" :"",
+            "tab" : "Content"
+        },
+        "media_id" : {
+            "type" : "media",
+            "caption" : "Media",
+            "default" : "",
+            "tab" : "Image"
+        },
+        "media_url" : {
+            "type" : "text",
+            "caption" : "Image URL (used if Image is unset)",
+            "default" : "",
+            "tab" : "Image"
+        },
+        "ring_color" : {
+            "type" : "color_picker",
+            "caption" : "Ring color",
+            "default" : "#777777",
+            "tab" : "Image"
+        },
+        "media_alt" : {
+            "type" : "text",
+            "caption" : "Img alternative text",
+            "default" : "",
+            "tab" : "Image"
+        }
     }
 }

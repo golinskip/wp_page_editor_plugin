@@ -8,22 +8,16 @@ if (!defined('WPINC')) {
     if($cnf['height'] != null) echo 'height: '.$cnf['height'].'; overflow:hidden;';
 ?>">
     
-    <?php if((int)$cnf['num_of_slides'] > 1): ?>
+    <?php if(count($cnf['slides']) > 1): ?>
         <ol class="carousel-indicators">
-            <?php for ($i = 0; $i < $cnf['num_of_slides']; $i++): ?>
+            <?php foreach($cnf['slides'] as $i => $curSlide): ?>
                 <li data-target="#carouselObj<?php echo $objCounter;?>" data-slide-to="<?php echo $i; ?>" class="<?php if($i == 0) echo "active" ?>"></li>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </ol>
     <?php endif; ?>
         <div class="carousel-inner wtst-pb-slider wtst-pb-slider-<?php echo $cnf['layout']; ?>" role="listbox">
-        <?php for ($i = 0; $i < $cnf['num_of_slides']; $i++): ?>
-            <?php
-            if (isset($cnf['slides'][$i])) {
-                $curSlide = $cnf['slides'][$i];
-            } else {
-                $curSlide = $structData['default-cnf']['slides'][0];
-            }
-            if ($curSlide['media_type'] == 2) {
+        <?php foreach($cnf['slides'] as $i => $curSlide):
+            if((int)$curSlide['media_id'] > 0) {
                 $image = wp_get_attachment_image_src($curSlide['media_id'], 'full' );
                 if ($image) {
                     list($src, $width, $height) = $image;
@@ -44,16 +38,16 @@ if (!defined('WPINC')) {
                         <p><?php echo $curSlide['description']; ?></p>
                 </div>
             </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
     </div>
-    <?php if((int)$cnf['num_of_slides'] > 1): ?>
+    <?php if(count($cnf['slides']) > 1): ?>
     <a class="carousel-control-prev no-scroll" href="#carouselObj<?php echo $objCounter;?>" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only"><?php echo __('Previous', 'wtst'); ?></span>
     </a>
     <a class="carousel-control-next no-scroll" href="#carouselObj<?php echo $objCounter;?>" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only"><?php echo __('Next', 'wtst'); ?></span>
     </a>
     <?php endif; ?>
 </div>

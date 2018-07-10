@@ -13,6 +13,13 @@ $currentValue = isset($cnf[$keyName])?$cnf[$keyName]:$element['default'];
         </label>
     <?php break;?>
     
+    <?php case 'textbox': ?>
+        <label>
+            <b><?php echo __($element['caption'], 'wtst'); ?></b><br/>
+            <?php echo wtst_page_builder_form::text($inputName, $currentValue, true); ?>
+        </label>
+    <?php break;?>
+    
     <?php case 'number': ?>
         <label>
             <b><?php echo __($element['caption'], 'wtst'); ?></b><br/>
@@ -20,10 +27,27 @@ $currentValue = isset($cnf[$keyName])?$cnf[$keyName]:$element['default'];
         </label>
     <?php break;?>
     
+    <?php case 'color_picker': ?>
+        <label>
+            <b><?php echo __($element['caption'], 'wtst'); ?></b><br/>
+            <?php echo wtst_page_builder_form::color_picker($inputName, $currentValue); ?>
+        </label>
+    <?php break;?>
+    
     <?php case 'options': ?>
         <label>
             <b><?php echo __($element['caption'], 'wtst'); ?></b><br/>
             <?php echo wtst_page_builder_form::options($inputName, $element['options'], $currentValue); ?>
+        </label>
+    <?php break;?>
+    
+    <?php case 'boolean': ?>
+        <label>
+            <b><?php echo __($element['caption'], 'wtst'); ?></b><br/>
+            <?php echo wtst_page_builder_form::options($inputName, [
+                0 => __("No", "wtst"),
+                1 => __("Yes", "wtst"),
+            ], $currentValue); ?>
         </label>
     <?php break;?>
     

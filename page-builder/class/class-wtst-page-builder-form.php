@@ -2,7 +2,9 @@
 class wtst_page_builder_form
 {
     protected static $globalIDIndex = [];
+    const ID_PREFIX = "struct-";
     protected static function preventUniqueID($name) {
+        $name = self::ID_PREFIX.$name;
         if(!isset(self::$globalIDIndex[$name])) {
             self::$globalIDIndex[$name] = true;
             return $name;
@@ -29,6 +31,17 @@ class wtst_page_builder_form
         return $out;
     }
     
+    public static function color_picker($name, $value = '', $addParam = '', $custom_id = '')
+    {
+        if ($custom_id == "") {
+            $custom_id = str_replace(['[', ']'], ['-','-'], $name);
+        }
+        $custom_id = self::preventUniqueID($custom_id);
+        $out ='<input class="wtst-form-controll" id="'.$custom_id.'" type="text" name="'.$name.'" value="'.$value.'" class="colorPicker" data-default-color="'.$value.'" '.$addParam.'/>';
+        $out.='<script type="text/javascript">jQuery("#'.$custom_id.'").wpColorPicker();</script>';
+        return $out;
+    }
+    
     public static function text($name, $value = '', $multicolumn = false, $addParam = '', $custom_id = '')
     {    
         if ($custom_id == "") {
@@ -37,9 +50,10 @@ class wtst_page_builder_form
         $custom_id = self::preventUniqueID($custom_id);
         $out = '';
         if($multicolumn) {
-            $out.='<textarea class="wtst-form-controll" id="'.$custom_id.'" name="'.$name.'" style="width:100%; min-height:400px;">';
+            $out.='<textarea class="wtst-form-controll" id="'.$custom_id.'" name="'.$name.'">';
             $out.= $value;
             $out.='</textarea>';
+            $out.='<script type="text/javascript">jQuery("#'.$custom_id.'").jqte();</script>';
         } else {
             $out.='<input class="wtst-form-controll" id="'.$custom_id.'" type="text" name="'.$name.'" value="'.$value.'" '.$addParam.'/>';
         }

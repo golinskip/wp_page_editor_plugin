@@ -20,6 +20,11 @@ class wtst_page_builder_backend {
         wp_enqueue_script('wtst-page-builder', plugin_dir_url(__FILE__) . '../js/wtst-page-builder.js');
         wp_enqueue_script('wtst-pb-edit-tools', plugin_dir_url(__FILE__) . '../js/wtst-pb-edit-tools.js');
         wp_enqueue_style ('wtst-page-builder', plugin_dir_url(__FILE__) . '../css/wtst-page-builder.css');
+
+        // Wysywig
+        wp_enqueue_script('wtst-wysywig', plugin_dir_url(__FILE__) . '../vendor/jquery-te.min.js');
+        wp_enqueue_style ('wtst-wysywig', plugin_dir_url(__FILE__) . '../vendor/jquery-te.css');
+
         wp_localize_script(
             'ajax-script',
             'ajax_object',

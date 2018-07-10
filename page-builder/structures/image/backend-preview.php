@@ -22,14 +22,14 @@ $cssPrfx = "wtst-pb-struct-slider-";
 </style>
 <div class="<?php echo $cssPrfx; ?>img-container">
     <img class="<?php echo $cssPrfx; ?>image" src="<?php
-        if($cnf['urlType'] == 2) {
+        if((int)$cnf['media_id'] > 0) {
             $image = wp_get_attachment_image_src($cnf['media_id']);
             if ( $image ) {
                 list($src, $width, $height) = $image;
             }
             echo $src;
         } else {
-            echo $cnf['url'];
+            echo $cnf['media_url'];
         }
-    ?>" />
+    ?>" alt="<?php echo $cnf['alt']; ?>" />
 </div>

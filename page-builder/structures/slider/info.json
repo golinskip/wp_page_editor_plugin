@@ -12,39 +12,92 @@
         "backend-config": "backend-config.php",
         "frontend": "frontend.php"
     },
-    "default-cnf": {
-        "duration": "1000",
-        "size": "full",
-        "layout": "simple",
-        "prop": "cut",
-        "num_of_slides": "1",
-        "height": "600px",
-        "slides": [
-            {
-                "media_type": 1,
-                "media_url": "http://via.placeholder.com/1280x300",
-                "title": "",
-                "description": "",
-                "url": "",
-                "text_position":"center"
+    "config" : {
+        "duration" : {
+            "type" : "number",
+            "caption" : "Slider duration",
+            "default" : "1000",
+            "tab" : "Options"
+        },
+        "size" : {
+            "type" : "options",
+            "caption" : "Slider size",
+            "options": {
+                "boxed" : "Boxed", 
+                "full-width" : "Full width", 
+                "full-height" : "Full height", 
+                "full" : "Fill width and height"
+            },
+            "default" :"boxed",
+            "tab" : "Options"
+        },
+        "height" : {
+            "type" : "text",
+            "caption" : "Height",
+            "default" : "400px",
+            "tab" : "Options"
+        },
+        "layout" : {
+            "type" : "options",
+            "caption" : "Layout",
+            "options": {
+                "simple": "Simple",
+                "parallax": "Parallax"
+            },
+            "default" :"simple",
+            "tab" : "Options"
+        },
+        "prop" : {
+            "type" : "options",
+            "caption" : "Proportions",
+            "options": {
+                "strech" : "Strech", 
+                "cut" : "Cut"
+            },
+            "default" :"strech",
+            "tab" : "StyOptionsle"
+        },
+        "slides" : {
+            "type" : "collection",
+            "tab" : "Slides",
+            "default": "1",
+            "components": {
+                "title" : {
+                    "type" : "text",
+                    "caption" : "Title",
+                    "default" :""
+                },
+                "media_id" : {
+                    "type" : "media",
+                    "caption" : "Image",
+                    "default" : ""
+                },
+                "media_url" : {
+                    "type" : "text",
+                    "caption" : "Image URL (used if Image is unset)",
+                    "default" : ""
+                },
+                "description" : {
+                    "type" : "text",
+                    "caption" : "Description",
+                    "default" :""
+                },
+                "url" : {
+                    "type" : "text",
+                    "caption" : "Link URL",
+                    "default" :"#"
+                },
+                "text_position" : {
+                    "type" : "options",
+                    "caption" : "Text position",
+                    "default" :"left",
+                    "options": {
+                        "left": "Left",
+                        "center": "Center",
+                        "right": "Right"
+                    }
+                }
             }
-        ] 
-    },
-    "attr": {
-        "text_position": {
-            "left": "Left",
-            "center": "Center",
-            "right": "Right"
-        },
-        "layout": {
-            "simple": "Simple",
-            "parallax": "Parallax"
-        },
-        "sizes": [
-            "boxed", "full-width", "full-height", "full"
-        ],
-        "prop": [
-            "strech", "cut"
-        ]
+        }
     }
 }
