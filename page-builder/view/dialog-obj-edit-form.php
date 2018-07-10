@@ -20,7 +20,7 @@ foreach($formData as $element) {
 <div id="tabs">
   <ul>
     <?php foreach($tabs as $tabKey=>$tab): ?>
-        <li><a href="#<?php echo $tabKey;?>"><?php echo $tab;?></a></li>
+        <li><a href="#<?php echo $tabKey;?>"><?php echo str_replace("_", " ", $tab);?></a></li>
     <?php endforeach; ?>
 </ul>
 

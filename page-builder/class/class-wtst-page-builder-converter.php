@@ -95,9 +95,10 @@ class wtst_page_builder_converter {
                         if (isset($curCol['obj']) && is_array($curCol['obj']))
                             foreach ($curCol['obj'] as $curObj) {
                                 $objCounter++;
-                                $curObjConfig = isset($curObj['cnf']) ? $curObj['cnf'] :  $defaultCnf['obj'];
+                                $curObjConfig = isset($curObj['cnf']) ? $curObj['cnf'] : $defaultCnf['obj'];
                                 $type = isset($curObj['type']) ? $curObj['type'] : '';
-                                $out .= $this->__backend_obj_header($type, $curObjConfig);
+                                $structureData = wtst_page_builder_structures::get_structure_data($type);
+                                $out .= $this->__backend_obj_header($type, $structureData['title'], $curObjConfig);
                                 $out .= wtst_page_builder_structures::get_structure_code($curObj['type'], 'backend-preview', $curObj['cnf'], $objCounter);
                                 $out .= '</div></div>';
                             }
@@ -109,7 +110,7 @@ class wtst_page_builder_converter {
         $out .= '<input type="hidden" id="pb-is-enabled" value="'.$enabled.'">';
         $out .= '<input type="hidden" name="pb-prototype-sec" value="' . htmlspecialchars($this->__backend_sec_header([])) . '</div></div>' . '"/>';
         $out .= '<input type="hidden" name="pb-prototype-col" value="' . htmlspecialchars($this->__backend_col_header([])) . '</div></div>' . '"/>';
-        $out .= '<input type="hidden" name="pb-prototype-obj" value="' . htmlspecialchars($this->__backend_obj_header('', [])) . '</div></div>' . '"/>';
+        $out .= '<input type="hidden" name="pb-prototype-obj" value="' . htmlspecialchars($this->__backend_obj_header('', __('New object', 'wtst'), [])) . '</div></div>' . '"/>';
         $out .= '<div id="pb-dialog" title=""></div>';
         $out .= '';
         return $out;
@@ -147,11 +148,11 @@ class wtst_page_builder_converter {
         return $out;
     }
 
-    protected function __backend_obj_header($type, $config) {
+    protected function __backend_obj_header($type, $title, $config) {
         $out = '';
         $out .= '<div class="pb-obj" data-type="' . $type . '" data-config="' . htmlspecialchars(json_encode($config)) . '">';
         $out .= '<div class="pb-obj-header">
-                    <span class="">'.$type.'</span>
+                    <span class="pb-obj-title">'.$title.'</span>
                     <span class="pb-icon dashicons dashicons-move left pb-obj-mover"></span>
                     <span class="pb-icon dashicons dashicons-trash     pb-obj-remove"></span>
                     <span class="pb-icon dashicons dashicons-admin-page pb-obj-duplicate"></span>

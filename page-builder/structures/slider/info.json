@@ -55,7 +55,7 @@
                 "cut" : "Cut"
             },
             "default" :"strech",
-            "tab" : "StyOptionsle"
+            "tab" : "Options"
         },
         "slides" : {
             "type" : "collection",

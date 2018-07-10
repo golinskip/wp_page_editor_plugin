@@ -11,8 +11,13 @@
 }
 
 
-.pb-sec-mover, .pb-col-mover, .pb-obj-mover{
+.pb-sec-mover, .pb-col-mover, .pb-obj-mover {
     cursor: move;
+}
+
+.pb-sec, .pb-obj, .pb-col {
+    border-radius: 10px;
+    overflow: hidden; 
 }
 
 .pb-sec-header, .pb-col-header, .pb-obj-header {
@@ -21,6 +26,7 @@
     background:#999;
     color: #fff;
     text-align: left;
+    padding-left: 10px;
     min-height: 28px;
 }
 
