@@ -13,7 +13,7 @@ class wtst_page_builder_converter {
         $xmldoc = new DOMDocument();
         $xmldoc->loadHTML('<?xml encoding="utf-8" ?>' .stripslashes(stripslashes($input)));
         $feeditem = $xmldoc->getElementsByTagName('div');
-        $rootNodde = $feeditem[0];
+        $rootNodde = $feeditem->item(0);
         $secNodes = $this->__get_elements_by_class($rootNodde, 'div', 'pb-sec');
 
         $secCnt = 0;

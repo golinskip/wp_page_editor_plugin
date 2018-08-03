@@ -6,24 +6,3 @@
 
         <?php /* Together end */ define('WTST_PB_JS_TEXT_IMAGE_LINK', true);
     endif; ?>
-
-
-    (function ($) {
-        $(function () {
-            <?php if ($cnf['urlType'] == 3): ?>
-                $('#<?php echo $obj['id']; ?> .hideme').shower({
-                    onAnimate: function (sf) {
-                        $('#<?php echo $obj['id']; ?> .circle').circleProgress({
-                            value: 1,
-                            size: 140,
-                            thickness: 3,
-                            fill: {
-                                color: "<?php echo $cnf['ring_color']; ?>"
-                            }
-                        });
-                        jQuery(window).trigger('resize');
-                    }
-                });
-            <?php endif; ?>
-        });
-    })(jQuery);

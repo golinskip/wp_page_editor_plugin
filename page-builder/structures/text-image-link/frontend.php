@@ -3,7 +3,7 @@ if (!defined('WPINC')) {
     die;
 }
 ?>
-<div class="wtst-pb-text-image-link <?php if($cnf['urlType'] == 3): ?>hideme<?php endif; ?>">
+<div class="wtst-pb-text-image-link">
     <?php if( (int)$cnf['media_id'] > 0  || strlen($cnf['media_url']) > 2 ): ?>
     
         <img alt="Generic placeholder image" class="rounded-circle" src="<?php

@@ -7,16 +7,21 @@
     padding-bottom: <?php echo $sec['cnf']['padding_bottom']; ?>px;
 
 <?php
-    if ($sec['cnf']['transparent'] == cnf_opts::NO) {
+    if ($sec['cnf']['transparent'] == cnf_opts::NO && $sec['cnf']['bgstyle'] != cnf_opts::BG_STYLE_PARALLAX) {
         if (strlen($sec['cnf']['bgcolor']) > 3) {
             echo 'background-color: ' . $sec['cnf']['bgcolor'] . ';' . "\n";
         }
         if (is_numeric($sec['cnf']['bgimage']) && $sec['cnf']['bgimage'] > 0) {
+
             $image = wp_get_attachment_image_src($sec['cnf']['bgimage'], 'full');
             if ($image) {
                 list($src, $width, $height) = $image;
             }
-            echo 'background-image: url(\'' . $src . '\');' . "\n";
+            if($sec['cnf']['bgstyle'] != cnf_opts::BG_STYLE_PARALLAX) {
+                echo 'background-image: url(\'' . $src . '\');' . "\n";
+            } else {
+                echo 'background: transparent;'."\n";
+            }
             switch($sec['cnf']['bgstyle']){
                 case cnf_opts::BG_STYLE_CENTER: {
                     echo 'background-repeat: no-repeat;' . "\n";

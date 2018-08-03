@@ -1,6 +1,6 @@
     #<?php echo $obj['id'];?> .wtst-pb-struct-text-box {
-	    /*text-align:<?php echo $cnf['align'] ?>;
-        font-size:<?php echo $cnf['font_size']; ?>*/
+	    text-align:<?php echo $cnf['align'] ?>;
+        /*font-size:<?php echo $cnf['font_size']; ?>;*/
     }
     #<?php echo $obj['id'];?> {
         <?php 

@@ -7,7 +7,9 @@
             $frontendCss .= ob_get_clean();
         ?>
         <div id="<?php echo $objct['id']; ?>" class="wtst-pb-object" <?php if(isset($objct['cnf']['aos_animation']) && $objct['cnf']['aos_animation']!= 'none') {
-          echo 'data-aos="'.$objct['cnf']['aos_animation'].'"';
+          echo ' data-aos="'.$objct['cnf']['aos_animation'].'"';
+          echo ' data-aos-duration="'.$objct['cnf']['aos_duration'].'"';
+          echo ' data-aos-delay="'.$objct['cnf']['aos_delay'].'"';
         }?>>
             <?php echo wtst_page_builder_structures::get_structure_code($objct['type'], 'frontend', $objct['cnf'], $objCounter); ?>
         </div>

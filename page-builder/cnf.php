@@ -8,6 +8,7 @@ $defaultCnf = [
         'height' => cnf_opts::HEIGHT_AUTO,
         'bgcolor' => '',
         'bgimage' => '',
+        'scrollify' => cnf_opts::NO,
         'bgstyle' => cnf_opts::BG_STYLE_CENTER,
         'parallax_speed' => 0,
         'padding_top' => 0,
@@ -27,26 +28,35 @@ $defaultCnf = [
         'config' => [
             'margin_left' => [
                 'type' => 'number',
-                'caption' => 'Margin Left (px)',
+                'caption' => 'Margin Left',
                 'default' => '0',
                 'tab' => 'Spacing'
             ],
             'margin_right' => [
                 'type' => 'number',
-                'caption' => 'Margin Right (px)',
+                'caption' => 'Margin Right',
                 'default' => '0',
                 'tab' => 'Spacing'
             ],
             'margin_top' => [
                 'type' => 'number',
-                'caption' => 'Margin Top (px)',
+                'caption' => 'Margin Top',
                 'default' => '0',
                 'tab' => 'Spacing'
             ],
             'margin_bottom' => [
                 'type' => 'number',
-                'caption' => 'Margin Bottom (px)',
+                'caption' => 'Margin Bottom',
                 'default' => '0',
+                'tab' => 'Spacing'
+            ],
+            'margin_unit' => [
+                'type' => 'options',
+                'options' => [
+                    'px' => 'Pixels',
+                    'vh' => 'Percent'
+                ],
+                'caption' => "Margin unit",
                 'tab' => 'Spacing'
             ],
             'padding_left' => [
@@ -71,6 +81,15 @@ $defaultCnf = [
                 'type' => 'number',
                 'caption' => 'Padding Bottom (px)',
                 'default' => '0',
+                'tab' => 'Spacing'
+            ],
+            'padding_unit' => [
+                'type' => 'options',
+                'options' => [
+                    'px' => 'Pixels',
+                    'vh' => 'Percent'
+                ],
+                'caption' => "Padding unit",
                 'tab' => 'Spacing'
             ],
             'aos_animation' => [
@@ -104,6 +123,18 @@ $defaultCnf = [
                 'default' => 'none',
                 'tab' => 'Animation'
             ],
+            'aos_duration' => [
+                'type' => 'number',
+                'caption' => 'Duration',
+                'default' => '500',
+                'tab' => 'Animation'
+            ],
+            'aos_delay' => [
+                'type' => 'number',
+                'caption' => 'Delay',
+                'default' => '0',
+                'tab' => 'Animation'
+            ],
         ]
     ],
 ];
@@ -120,6 +151,10 @@ $optionsCnf = [
             cnf_opts::HEIGHT_75 =>   __('75%', 'wtst'),
             cnf_opts::HEIGHT_50 =>   __('50%', 'wtst'),
             cnf_opts::HEIGHT_25 =>   __('25%', 'wtst'),
+        ],
+        'scrollify' => [
+            cnf_opts::YES => __("Yes", 'wtst'),
+            cnf_opts::NO =>  __("No", 'wtst'),
         ],
         'transparent' => [
             cnf_opts::YES => __("Yes", 'wtst'),

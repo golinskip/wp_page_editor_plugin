@@ -18,7 +18,7 @@
                     break;
             }
             if($col['cnf']['margin'] == cnf_opts::NO) {
-                $class.=' pl-0 pr-0';
+                //$class.=' pl-0 pr-0';
             }
             
         ?>

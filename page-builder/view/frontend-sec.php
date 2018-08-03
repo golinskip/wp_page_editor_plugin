@@ -60,11 +60,23 @@ $objCounter = 0;
                 $bgClass=' parallax-window';   
                 wp_enqueue_script('jquery-parallax', plugin_dir_url(__FILE__) . '../js/parallax.min.js', array(), false, true);
             }
+            wp_enqueue_script('jquery-scrollify', plugin_dir_url(__FILE__) . '../js/jquery.scrollify.js', array(), false, true); 
             
             // Czy oklasowana ma być sekcja czy container
             $bgFull = ($sec['cnf']['width'] == cnf_opts::COL_WIDTH_LL || $sec['cnf']['width'] == cnf_opts::COL_WIDTH_LW)?1:0;
         ?>
-        <section class="fullwidth-section<?php echo $secClass; if($secCounter == 1) echo ' visible'; if($bgFull) echo $bgClass;?>" <?php if($bgFull) echo 'id="'.$secId.'" '.$bgAdditionals; ?>>
+        <section class="fullwidth-section<?php
+                echo $secClass; 
+                if($secCounter == 1){
+                    echo ' visible'; 
+                }
+                if($bgFull){
+                    echo $bgClass;
+                }
+                if($sec['cnf']['scrollify'] == cnf_opts::YES) {
+                    echo ' scrollify';
+                }
+            ?>" <?php if($bgFull) echo 'id="'.$secId.'" '.$bgAdditionals; ?>>
             <div class="<?php echo $class; if(!$bgFull) echo $bgClass; ?>" <?php if(!$bgFull) echo 'id="'.$secId.'" '.$bgAdditionals; ?>>
                 <?php if ($sec['cnf']['anchor'] != null):?>
                     <a id="<?php echo $sec['cnf']['anchor']; ?>"></a>

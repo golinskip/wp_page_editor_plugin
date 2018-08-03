@@ -25,6 +25,10 @@ global $defaultCnf;
             <td><?php echo wtst_page_builder_form::options('width', $optionsCnf['sec']['width'], $cfg['width']);?></td>
         </tr>
         <tr>
+            <td><?php echo __('Section scrollify', 'wtst'); ?></td>
+            <td><?php echo wtst_page_builder_form::options('scrollify', $optionsCnf['sec']['scrollify'], $cfg['scrollify']);?></td>
+        </tr>
+        <tr>
             <td><?php echo __('Section height', 'wtst'); ?></td>
             <td><?php echo wtst_page_builder_form::options('height', $optionsCnf['sec']['height'], $cfg['height']);?></td>
         </tr>

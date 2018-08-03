@@ -9,7 +9,9 @@ $sumsize = 0;
 ?>
 
 <div class="row nopadding wtst-pb-portfolio wtst-pb-portfolio-<?php echo $cnf['style']; ?>">
-        <?php foreach($cnf['slides'] as $curSlide):
+        <?php 
+            $i = 0;
+            foreach($cnf['slides'] as $curSlide):
                 if((int)$curSlide['media_id'] > 0) {
                     $image = wp_get_attachment_image_src($curSlide['media_id'], "large");
                     $imageFull = wp_get_attachment_image_src($curSlide['media_id'], "full");
@@ -51,7 +53,7 @@ $sumsize = 0;
             <div class="<?php echo $mainClass; ?>">
                 <?php if($imageUrlFull != null):?>
                 <?php if(strlen($curSlide['url']) > 2):?><a href ="<?php echo $curSlide['url']; ?>"><?php endif; ?>
-                <div class="hovereffect" <?php if((int)$curSlide['custom_height'] > 0){ 
+                <div class="hovereffect" <?php if((int)$curSlide['custom_height'] > 0) {
                     $hgh = (int)$curSlide['custom_height'];
                     $hgh = (isset($height) && $hgh<$height)?$height:$hgh;
                     echo 'style="height:'.$curSlide['custom_height'].'px"';
@@ -72,7 +74,10 @@ $sumsize = 0;
                 <?php if(strlen($curSlide['url']) > 2):?></a><?php endif; ?>
                 <?php endif; ?>
             </div>
-        <?php endforeach; ?>
+        <?php 
+            $i++;
+            endforeach;
+        ?>
     <?php if($addReadMore):?>
     <div class="col-md-12 text-center">
         <button type="button" class="btn wtst-pb-portfolio-hidden-show <?php echo $cnf['button_style']; ?>"  role="button"><?php echo $cnf['read_more_caption'];?> <i class="fas fa-angle-double-down"></i></button>
