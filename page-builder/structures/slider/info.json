@@ -52,9 +52,10 @@
             "caption" : "Proportions",
             "options": {
                 "strech" : "Strech", 
-                "cut" : "Cut"
+                "cut" : "Cut",
+                "cut-top": "cut-top"
             },
-            "default" :"strech",
+            "default" :"cut",
             "tab" : "Options"
         },
         "slides" : {
